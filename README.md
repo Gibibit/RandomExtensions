@@ -1,8 +1,3 @@
-A convenience extension library for System.Random.
+# RandomExtensions
 
-Currently works with:
-** System **
-- List<T>
-
-** MonoGame.Framework **
-- Vector2
+A convenience extension library for System.Random. Has extensions methods working with both System and MonoGame.
