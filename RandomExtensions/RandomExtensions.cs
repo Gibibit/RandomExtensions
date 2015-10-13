@@ -61,6 +61,9 @@ namespace RandomExtensions
         private const int ASCII_FIRST_NON_CTRL_CHAR = 32;
         private const int ASCII_LAST_CHAR = 255;
 
+        /// <summary>
+        /// Returns a random (non-control code) ASCII character.
+        /// </summary>
         public static char NextASCIIChar(this Random r) => (char) (r.Next(ASCII_FIRST_NON_CTRL_CHAR, ASCII_LAST_CHAR + 1));
 
         public static string NextASCIIString(this Random r, int length)
