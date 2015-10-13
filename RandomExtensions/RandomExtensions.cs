@@ -61,12 +61,31 @@ namespace RandomExtensions
         private const int ASCII_FIRST_NON_CTRL_CHAR = 32;
         private const int ASCII_LAST_CHAR = 255;
 
-        public static char NextASCIIChar(this Random r) => (char) (r.Next(ASCII_FIRST_NON_CTRL_CHAR, ASCII_LAST_CHAR + 1));
+        /// <summary>
+        /// Returns a random (non-control code) ASCII character.
+        /// </summary>
+        public static char NextCharASCII(this Random r) => (char) (r.Next(ASCII_FIRST_NON_CTRL_CHAR, ASCII_LAST_CHAR + 1));
 
-        public static string NextASCIIString(this Random r, int length)
+        /// <summary>
+        /// Returns a random ASCII string of specified length that does not contain any control code characters.
+        /// </summary>
+        public static string NextStringASCII(this Random r, int length)
         {
             var result = "";
-            for (int i = 0; i < length; i++) result += r.NextASCIIChar();
+            for (int i = 0; i < length; i++) result += r.NextCharASCII();
+            return result;
+        }
+
+        // ASCII lowercase letter codes
+        private const int ASCII_LOWER_A = 97;
+        private const int ASCII_LOWER_Z = 122;
+
+        public static char NextCharLowerAlphabetic(this Random r) => (char) r.Next(ASCII_LOWER_A, ASCII_LOWER_Z + 1);
+
+        public static string NextStringLowerAlphabetic(this Random r, int length)
+        {
+            var result = "";
+            for (int i = 0; i < length; i++) result += r.NextCharLowerAlphabetic();
             return result;
         }
 
