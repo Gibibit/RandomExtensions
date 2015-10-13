@@ -46,5 +46,14 @@ namespace RandomExtensions
 
         public static float NextFloat(this Random r) => (float) r.NextDouble();
 
+        public static string NextString(this Random r, int length)
+        {
+            var result = "";
+            for (int i = 0; i < length; i++) result += r.NextChar();
+            return result;
+        }
+
+        public static char NextChar(this Random r) => (char) r.Next(char.MaxValue);
+
     }
 }
