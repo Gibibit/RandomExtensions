@@ -46,6 +46,8 @@ namespace RandomExtensions
 
         public static float NextFloat(this Random r) => (float) r.NextDouble();
 
+        #region Strings
+
         public static string NextString(this Random r, int length)
         {
             var result = "";
@@ -55,7 +57,11 @@ namespace RandomExtensions
 
         public static char NextChar(this Random r) => (char) r.Next(char.MaxValue);
 
-        public static char NextASCIIChar(this Random r) => (char)(r.Next(128));
+        // Some useful ASCII numbers
+        private const int ASCII_FIRST_NON_CTRL_CHAR = 32;
+        private const int ASCII_LAST_CHAR = 255;
+
+        public static char NextASCIIChar(this Random r) => (char) (r.Next(ASCII_FIRST_NON_CTRL_CHAR, ASCII_LAST_CHAR + 1));
 
         public static string NextASCIIString(this Random r, int length)
         {
@@ -63,6 +69,8 @@ namespace RandomExtensions
             for (int i = 0; i < length; i++) result += r.NextASCIIChar();
             return result;
         }
+
+        #endregion Strings
 
     }
 }
