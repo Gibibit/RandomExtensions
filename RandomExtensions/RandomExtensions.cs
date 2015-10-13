@@ -55,5 +55,14 @@ namespace RandomExtensions
 
         public static char NextChar(this Random r) => (char) r.Next(char.MaxValue);
 
+        public static char NextASCIIChar(this Random r) => (char)(r.Next(128));
+
+        public static string NextASCIIString(this Random r, int length)
+        {
+            var result = "";
+            for (int i = 0; i < length; i++) result += r.NextASCIIChar();
+            return result;
+        }
+
     }
 }
