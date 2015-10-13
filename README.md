@@ -1,6 +1,6 @@
 *Random? More like ranFUN!*
 
-A convenience extension library using System.Random. Has extensions methods working with both `System` and `MonoGame`.
+Extends `System.Random` for usage with `System` and `MonoGame`.
 
 
 **Quick overview**
