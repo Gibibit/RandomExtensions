@@ -9,6 +9,7 @@ Extends `System.Random` for usage with `System` and `MonoGame`.
 - `NextRotation` generates a random rotation Matrix
 - `NextColor` generates random Colors
 - `NextChar` and `NextString` generate random characters and strings
+- Create `Distribution`s which return random values in the frequencies that you desire.
 
 **Need more Random? More *specific* Random?**
 
