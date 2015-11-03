@@ -1,5 +1,3 @@
-[![randomextensions MyGet Build Status](https://www.myget.org/BuildSource/Badge/randomextensions?identifier=8414a561-24e7-4832-98b6-93ff64ae8e21)](https://www.myget.org/)
-
 *Random? More like ranFUN!*
 
 Extends `System.Random` for usage with `System` and `MonoGame`.
