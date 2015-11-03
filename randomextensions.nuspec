@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>HermansGameDev.RandomExtensions</id>
+    <version>$version$</version>
+    <title>RandomExtensions</title>
+    <authors>Herman Groenenboom</authors>
+    <owners>Herman Groenenboom</owners>
+    <licenseUrl>https://raw.githubusercontent.com/HermansGameDev/RandomExtensions/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/HermansGameDev/RandomExtensions</projectUrl>
+    <iconUrl></iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Extends System.Random for usage with System and MonoGame.</description>
+    <releaseNotes></releaseNotes>
+    <copyright></copyright>
+    <tags>monogame random</tags>
+  </metadata>
+  <files>
+	<file src="Dependencies\MonoGame.Framework.dll" target="lib\net40\" />
+  </files>
+</package>
