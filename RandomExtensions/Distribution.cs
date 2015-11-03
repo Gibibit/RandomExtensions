@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics.Contracts;
 using System.Linq;
 
-namespace RandomExtensions
+namespace HermansGameDev.RandomExtensions
 {
     public class Distribution<T>
     {

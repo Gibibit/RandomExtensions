@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 
-namespace RandomExtensions
+namespace HermansGameDev.RandomExtensions
 {
     public static class RandomExtensions
     {
