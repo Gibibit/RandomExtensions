@@ -8,11 +8,8 @@
     <owners>Herman Groenenboom</owners>
     <licenseUrl>https://raw.githubusercontent.com/HermansGameDev/RandomExtensions/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/HermansGameDev/RandomExtensions</projectUrl>
-    <iconUrl></iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Extends System.Random for usage with System and MonoGame.</description>
-    <releaseNotes></releaseNotes>
-    <copyright></copyright>
     <tags>monogame random</tags>
   </metadata>
   <files>
