@@ -8,11 +8,13 @@ namespace HermansGameDev.RandomExtensions
     {
         #region MonoGame
 
-        public static Vector2 NextVector2Unit(this Random r) => Vector2.Normalize(new Vector2(r.NextFloat(), r.NextFloat()));
+        public static Point NextPoint(this Random r, int xMin, int yMin, int xMax, int yMax) => new Point(xMin + r.Next(xMax - xMin), yMin + r.Next(yMax - yMin));
 
-        public static Vector3 NextVector3Unit(this Random r) => Vector3.Normalize(new Vector3(r.NextFloat(), r.NextFloat(), r.NextFloat()));
+        public static Vector2 NextVector2Direction(this Random r) => Vector2.Normalize(new Vector2(r.NextFloat(), r.NextFloat()));
 
-        public static Color NextColor(this Random r) => new Color(NextVector3Unit(r));
+        public static Vector3 NextVector3Direction(this Random r) => Vector3.Normalize(new Vector3(r.NextFloat(), r.NextFloat(), r.NextFloat()));
+
+        public static Color NextColor(this Random r) => new Color(NextVector3Direction(r));
         
         public static Matrix NextRotationX(this Random r) => Matrix.CreateRotationX(r.NextFloat()*MathHelper.TwoPi);
         public static Matrix NextRotationY(this Random r) => Matrix.CreateRotationY(r.NextFloat()*MathHelper.TwoPi);
@@ -21,12 +23,12 @@ namespace HermansGameDev.RandomExtensions
         /// <summary>
         /// Rotates a Vector2 to a random direction
         /// </summary>
-        public static Vector2 NextRotateVector2(this Random r, Vector2 v) => r.NextVector2Unit()*v.Length();
+        public static Vector2 NextRotateVector2(this Random r, Vector2 v) => r.NextVector2Direction()*v.Length();
 
         /// <summary>
         /// Rotates a Vector3 to a random direction
         /// </summary>
-        public static Vector3 NextRotateVector3(this Random r, Vector3 v) => r.NextVector3Unit()*v.Length();
+        public static Vector3 NextRotateVector3(this Random r, Vector3 v) => r.NextVector3Direction()*v.Length();
 
         #endregion MonoGame
 
